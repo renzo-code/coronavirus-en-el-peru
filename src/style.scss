@@ -1,0 +1,271 @@
+.container{
+  display: flex;
+  margin: 20px auto 0;
+  width : 974px;
+  height : 78px;
+  margin : 5 auto ;
+  background-image: url("https://origin.cronosmedia.glr.pe/large/2020/11/20/lg_5fb8080d8362a65a906397fa.jpg");
+  background-repeat: no-repeat;
+  & > a {
+    display: flex;
+    text-decoration: none;
+  }
+}
+.contenedor-titulo{
+  padding-top: 8px;
+  padding-left: 15px;
+  display: block;
+  width: 170px;
+  height: 100%;
+  font-weight: bold;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 23px;
+}
+.titlulo2{
+  padding-left: 62px;
+}
+.status-covid{
+  margin-left: 20px;
+  margin-top: 7px;
+  height: 60px;
+  width: 230px;
+  border-right: 1px solid #889A9E;
+  
+}
+.status-casos-totales{
+  position: relative;
+  color: red;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  border-bottom: 1px solid #889A9E;
+  margin-right: 10px;
+  height: 22px;
+}
+.numero-status-casos{
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  font-size: 18px;
+  font-family: 'Poppins',sans-serif;
+}
+.numero-parentesis{
+  position: absolute;
+  top: 2px;
+  font-size: 12px;
+  right: -1px;
+}
+.numero-casos-totales{
+  position: absolute;
+  right: 1px;
+  top: 2px;
+  font-size: 15px;
+}
+.status-fallecidos{
+  position: relative;
+  color: #9F99A3;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  border-bottom: 1px solid #889A9E;
+  margin-right: 10px;
+  height: 22px;
+}
+.numero-status-fallecidos{
+  position: absolute;
+  font-size: 18px;
+  right: 35px;
+  top: 0;
+}
+.numero-parentesis-fallecidos{
+  position: absolute;
+  font-size: 12px;
+  top: 3px;
+  right: 1px;
+}
+.status-recuperados{
+  position: relative;
+  color: #0ED97D;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  height: 22px;
+}
+.text-recuperados{
+  font-size: 12px;
+  padding-top: 2px;
+  font-family: 'Roboto', sans-serif;
+}
+.numero-status-recuperados{
+  position: absolute;
+  top: 1px;
+  right: 60px;
+  font-size: 18px;
+}
+.numero-parentesis-recuperados{
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-size: 12px;
+}
+.status-15dias{
+  margin-left: 15px;
+  margin-top: 7px;
+  height: 60px;
+  width: 200px;
+  border-right: 1px solid #889A9E;
+}
+.titulo-15dias{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid #889A9E;
+  height: 25px;
+  margin-right: 10px;
+}
+.status-casos{
+  position: relative;
+  color: #9F99A3;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  height: 25px;
+}
+.numero-ultimos-fallecidos{
+  position: absolute;
+  font-size: 15px;
+  right: 10px;
+  top: 1px;
+}
+.evolucion-diaria{
+  width: 210px;
+  margin-left: 10px;
+  height: 60px;
+  
+}
+.titulo-evolucion-diaria{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid #889A9E;
+  height: 25px;
+  margin-right: 7px;
+  padding-top: 3px;
+}
+.cont-titulos-barra{
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  padding-bottom: 4px;
+  height: 52px;
+}
+.titulo-casos{
+  position: relative;
+  width: 110px;
+  height: 100%;
+  color: red;
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  border-right: 1px solid #889A9E;
+  padding-top: 5px;
+}
+.titulo-1grafico{
+  position: absolute;
+  bottom: 1px;
+  font-size: 10px;
+}
+.titulo-fallecidos{
+  position: relative;
+  width: 110px;
+  color: #949DA4;
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+.titulo-2grafico{
+  position: absolute;
+  font-size: 10px;
+  bottom: 1px;
+}
+.cont-botones{
+  padding-top: 5px;
+  margin-top: 6px;
+  width: 104px;
+  height: 65px;
+  border-left: 1px solid #889A9E;
+  padding-left: 10px;
+}
+.btn-sudamerica{
+  font-size: 11.8px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 30px;
+  width: 100px;
+  margin-left: 5px;
+}
+.btn-mundo{
+  margin-left: 5px;
+  font-size: 11.8px;
+  margin-top: 3px;
+  padding-left: 5px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 25px;
+  padding-right: 5px;
+  width: 100px;
+}
+.cont-btn1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  &:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+}
+.cont-btn2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  &:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+}
+
+
+
+@media(max-width: 900px){
+  .cont-botones{
+    display: none;
+  }
+  .container{
+    width: 860px;
+  }
+}
+@media(max-width: 770px){
+  .evolucion-diaria{
+    display: none;
+  }
+  .container{
+    width: 635px;
+  }
+}
+@media(max-width: 560px){
+  .status-15dias{
+    display: none;
+  }
+  .container{
+    width: 420px;
+  }
+}
