@@ -112,7 +112,7 @@ class App extends React.Component{
           </div>
 
           <div className="status-15dias">
-            <div className="titulo-15dias">ÚLTIMOS 15 DIAS</div>
+            <div className="titulo-15dias">ÚLTIMOS 15 DÍAS</div>
             <div className="status-casos-totales"><h6 className="text-recuperados">CASOS</h6> <h5 className="numero-casos-totales">{ultimosCasos[0]?.value}</h5></div>
             <div className="status-casos"><h6 className="text-recuperados">FALLECIDOS</h6><h5 className="numero-ultimos-fallecidos">{ultimosFallecidos[0]?.value}</h5></div>
           </div>
