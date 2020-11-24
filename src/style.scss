@@ -22,8 +22,10 @@
   font-family: 'Roboto', sans-serif;
   font-size: 23px;
 }
-.titlulo2{
+.subtitulo-covid{
   padding-left: 62px;
+  font-size: 23px;
+  font-weight: bold;
 }
 .status-covid{
   margin-left: 20px;
@@ -48,6 +50,7 @@
   top: 0px;
   font-size: 18px;
   font-family: 'Poppins',sans-serif;
+  font-weight: bold;
 }
 .numero-parentesis{
   position: absolute;
@@ -75,6 +78,7 @@
   font-size: 18px;
   right: 35px;
   top: 0;
+  font-weight: bold;
 }
 .numero-parentesis-fallecidos{
   position: absolute;
@@ -97,8 +101,9 @@
 .numero-status-recuperados{
   position: absolute;
   top: 1px;
-  right: 60px;
+  right: 45px;
   font-size: 18px;
+  font-weight: bold;
 }
 .numero-parentesis-recuperados{
   position: absolute;
@@ -242,10 +247,15 @@
     transition: 0.3s;
   }
 }
+.titulo-covid{
+  font-size: 23px;
+  font-family: 'Roboto',sans-serif;
+  font-weight: bold;
+}
 
 
 
-@media(max-width: 900px){
+@media(max-width: 950px){
   .cont-botones{
     display: none;
   }
@@ -253,7 +263,7 @@
     width: 860px;
   }
 }
-@media(max-width: 770px){
+@media(max-width: 830px){
   .evolucion-diaria{
     display: none;
   }
@@ -261,11 +271,51 @@
     width: 635px;
   }
 }
-@media(max-width: 560px){
+@media(max-width: 590px){
   .status-15dias{
     display: none;
   }
   .container{
     width: 420px;
+  }
+}
+@media(max-width: 375px){
+  .container{
+    width: 380px;
+  }
+  .contenedor-titulo{
+    width: 145px;
+    padding-top: 11px;
+  }
+  .contenedor-titulo{
+    padding-left: 5px;
+  }
+  .status-covid{
+    margin-left: 0;
+  }
+  .titulo-covid{
+    font-size: 19px;
+  }
+  .subtitulo-covid{
+    font-size: 19px;
+    padding-left: 53px;
+  }
+  .numero-status-recuperados{
+    right: 65px;
+  }
+  .numero-parentesis-recuperados{
+    right: 19px;
+  }
+  .numero-status-fallecidos{
+    right: 40px;
+  }
+  .numero-parentesis-fallecidos{
+    right: 10px;
+  }
+  .numero-status-casos{
+    right: 48px;
+  }
+  .numero-parentesis{
+    right: 10px;
   }
 }

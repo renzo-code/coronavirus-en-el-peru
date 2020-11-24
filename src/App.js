@@ -91,7 +91,7 @@ class App extends React.Component{
         <a target="_blank" href={url[0]?.value}>
           <div className="contenedor-titulo">
             <Bandera/>
-              CORONAVIRUS <div className="titlulo2">EN PERÚ</div>
+              <h3 className="titulo-covid">CORONAVIRUS</h3><div><h3 className="subtitulo-covid">EN PERÚ</h3></div>
           </div>
           <div className="status-covid">
             <div className="status-casos-totales">
