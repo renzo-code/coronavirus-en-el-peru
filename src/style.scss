@@ -6,6 +6,7 @@
   margin : 5 auto ;
   background-image: url("https://origin.cronosmedia.glr.pe/large/2020/11/20/lg_5fb8080d8362a65a906397fa.jpg");
   background-repeat: no-repeat;
+  overflow: hidden;
   & > a {
     display: flex;
     text-decoration: none;
@@ -271,7 +272,7 @@
     width: 635px;
   }
 }
-@media(max-width: 590px){
+@media(max-width: 615px){
   .status-15dias{
     display: none;
   }
@@ -279,9 +280,9 @@
     width: 420px;
   }
 }
-@media(max-width: 375px){
+@media(max-width: 400px){
   .container{
-    width: 380px;
+    width: 365px;
   }
   .contenedor-titulo{
     width: 145px;
@@ -301,7 +302,7 @@
     padding-left: 53px;
   }
   .numero-status-recuperados{
-    right: 65px;
+    right: 50px;
   }
   .numero-parentesis-recuperados{
     right: 19px;
