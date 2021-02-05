@@ -46,7 +46,7 @@
 }
 .numero-status-casos{
   position: absolute;
-  right: 40px;
+  right: 43px;
   top: 0px;
   font-size: 18px;
   font-family: 'Poppins',sans-serif;
@@ -76,7 +76,7 @@
 .numero-status-fallecidos{
   position: absolute;
   font-size: 18px;
-  right: 35px;
+  right: 40px;
   top: 0;
   font-weight: bold;
 }
@@ -101,7 +101,7 @@
 .numero-status-recuperados{
   position: absolute;
   top: 1px;
-  right: 45px;
+  right: 50px;
   font-size: 18px;
   font-weight: bold;
 }
@@ -142,7 +142,7 @@
 }
 .evolucion-diaria{
   width: 210px;
-  margin-left: 10px;
+  margin-left: 5px;
   height: 60px;
   
 }
@@ -155,7 +155,6 @@
   font-size: 18px;
   border-bottom: 1px solid #889A9E;
   height: 25px;
-  margin-right: 7px;
   padding-top: 3px;
 }
 .cont-titulos-barra{
@@ -174,11 +173,15 @@
   font-family: 'Roboto', sans-serif;
   border-right: 1px solid #889A9E;
   padding-top: 5px;
+  padding-right: 5px;
 }
 .titulo-1grafico{
   position: absolute;
   bottom: 1px;
   font-size: 10px;
+  width: 100%;
+  height: auto;
+  padding-left: 5px;
 }
 .titulo-fallecidos{
   position: relative;
@@ -186,13 +189,13 @@
   color: #949DA4;
   font-size: 10px;
   font-family: 'Roboto', sans-serif;
-  padding-left: 10px;
   padding-bottom: 15px;
 }
 .titulo-2grafico{
   position: absolute;
   font-size: 10px;
   bottom: 1px;
+  padding-left: 10px;
 }
 .cont-botones{
   padding-top: 1px;
@@ -201,6 +204,7 @@
   height: 65px;
   border-left: 1px solid #889A9E;
   padding-left: 10px;
+  margin-left: 5px;
 }
 .btn-sudamerica{
   font-size: 11.8px;
@@ -252,7 +256,11 @@
   font-family: 'Roboto',sans-serif;
   font-weight: bold;
 }
-
+.grafico-casos{
+  height: 25px;
+  width: 100%;
+  background-color: transparent;
+}
 
 
 @media(max-width: 950px){

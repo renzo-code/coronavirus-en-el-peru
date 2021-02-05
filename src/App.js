@@ -2,9 +2,9 @@ import React from 'react'
 import Axios from 'axios'
 
 import Bandera from './components/Bandera/Bandera'
-import Grafico from './components/Grafico/Grafico'
+// import Grafico from './components/Grafico/Grafico'
 
-import { Sparklines, SparklinesLine } from 'react-sparklines';
+// import { Sparklines, SparklinesLine } from 'react-sparklines';
 
 import './App.css'
 import './style.scss'
@@ -17,6 +17,8 @@ class App extends React.Component{
     ultimosCasos : {},
     ultimosFallecidos: {},
     url: {},
+    imgCasos: {},
+    imgFallecidos: {},
 
     estadisticaCasos : [],
     estadisticaFallecidos : []
@@ -36,16 +38,18 @@ class App extends React.Component{
         url: 'https://cronosservices.glr.pe/api/spotlight?site_id=larepublica&_id=5fb7ebafd9b52b705b260634&no-api-cache=1&no-cache=1&status=1'
       }
       const dataCoronavirus = await Axios(options)
-      console.log('dataCoronavirus',dataCoronavirus.data.data.spotlight.data)
+      // console.log('dataCoronavirus',dataCoronavirus.data.data.spotlight.data)
       const { data } = dataCoronavirus.data.data.spotlight
-
+      // console.log('data', data[5].data[0].value)
       this.setState({
         casosTotales : data[0].data[0]?.value.split('_'),
         fallecidos : data[1].data[0]?.value.split('_'),
         recuperados : data[2].data[0]?.value.split('_'),
         ultimosCasos : data[3].data,
         ultimosFallecidos : data[4].data,
-        url : data[5].data
+        url : data[5].data,
+        imgCasos: data[5].data[0].value,
+        imgFallecidos: data[5].data[1].value
       })
     }
     catch(e){
@@ -56,7 +60,7 @@ class App extends React.Component{
   obtenerDatosCasos = async () => {
     try{
       const datosCasosObtenidos = await Axios.get("https://content-sheets.googleapis.com/v4/spreadsheets/12FXPCaqwtGVNmgKKmlttkXbxk0wF3vfkQwQQqkoKlv8/values/'Nuevo'!B20:NZ20?access_token=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk&key=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk")
-      console.log('datosCasosObtenidos',datosCasosObtenidos.data.values)
+      // console.log('datosCasosObtenidos',datosCasosObtenidos.data.values)
       this.setState({
         estadisticaCasos : datosCasosObtenidos.data.values[0]
       })
@@ -69,7 +73,7 @@ class App extends React.Component{
   obtenerDatosFallecidos = async () => {
     try{
       const datosCasosFallecidos = await Axios.get("https://content-sheets.googleapis.com/v4/spreadsheets/12FXPCaqwtGVNmgKKmlttkXbxk0wF3vfkQwQQqkoKlv8/values/'Nuevo'!B21:NZ21?access_token=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk&key=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk")
-      console.log('dattt',datosCasosFallecidos.data.values)
+      // console.log('dattt',datosCasosFallecidos.data.values)
       this.setState({
         estadisticaFallecidos : datosCasosFallecidos.data.values[0]
       })
@@ -81,8 +85,17 @@ class App extends React.Component{
 
 
   render(){
-    const { casosTotales, ultimosCasos, ultimosFallecidos , fallecidos, recuperados, url, estadisticaCasos, estadisticaFallecidos} = this.state
-    console.log('estadisticaFallecidos',estadisticaFallecidos)
+    const { 
+      casosTotales, 
+      ultimosCasos, 
+      ultimosFallecidos , 
+      fallecidos, recuperados, 
+      url, 
+      estadisticaCasos, 
+      estadisticaFallecidos, 
+      imgCasos, 
+      imgFallecidos
+    } = this.state
 
     return (
       <>
@@ -123,15 +136,17 @@ class App extends React.Component{
             </div>
             <div className="cont-titulos-barra">
               <div className="titulo-casos">
-                <Sparklines data={estadisticaCasos} limit={300} width={100} height={25} margin={0}>
+              <img className="grafico-casos" src={imgCasos} alt=""/>
+                {/* <Sparklines data={estadisticaCasos} limit={300} width={100} height={25} margin={0}>
                   <SparklinesLine color="red" />
-                </Sparklines>
+                </Sparklines> */}
                 <h6 className="titulo-1grafico">CASOS</h6>
               </div>
               <div className="titulo-fallecidos">
-                <Sparklines data={estadisticaFallecidos} limit={300} width={100} height={25} margin={0}>
+                {/* <Sparklines data={estadisticaFallecidos} limit={300} width={100} height={25} margin={0}>
                   <SparklinesLine/>
-                </Sparklines>
+                </Sparklines> */}
+                <img className="grafico-casos" src={imgFallecidos} alt=""/>
                 <h6 className="titulo-2grafico">FALLECIDOS</h6>
               </div>
             </div>
