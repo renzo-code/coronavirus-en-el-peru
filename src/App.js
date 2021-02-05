@@ -55,7 +55,7 @@ class App extends React.Component{
 
   obtenerDatosCasos = async () => {
     try{
-      const datosCasosObtenidos = await Axios.get("https://content-sheets.googleapis.com/v4/spreadsheets/12FXPCaqwtGVNmgKKmlttkXbxk0wF3vfkQwQQqkoKlv8/values/'Nuevo'!B20:JH20?access_token=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk&key=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk")
+      const datosCasosObtenidos = await Axios.get("https://content-sheets.googleapis.com/v4/spreadsheets/12FXPCaqwtGVNmgKKmlttkXbxk0wF3vfkQwQQqkoKlv8/values/'Nuevo'!B20:NZ20?access_token=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk&key=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk")
       console.log('datosCasosObtenidos',datosCasosObtenidos.data.values)
       this.setState({
         estadisticaCasos : datosCasosObtenidos.data.values[0]
@@ -68,7 +68,7 @@ class App extends React.Component{
 
   obtenerDatosFallecidos = async () => {
     try{
-      const datosCasosFallecidos = await Axios.get("https://content-sheets.googleapis.com/v4/spreadsheets/12FXPCaqwtGVNmgKKmlttkXbxk0wF3vfkQwQQqkoKlv8/values/'Nuevo'!B21:JH21?access_token=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk&key=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk")
+      const datosCasosFallecidos = await Axios.get("https://content-sheets.googleapis.com/v4/spreadsheets/12FXPCaqwtGVNmgKKmlttkXbxk0wF3vfkQwQQqkoKlv8/values/'Nuevo'!B21:NZ21?access_token=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk&key=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk")
       console.log('dattt',datosCasosFallecidos.data.values)
       this.setState({
         estadisticaFallecidos : datosCasosFallecidos.data.values[0]

@@ -3,10 +3,9 @@
   margin: 20px auto 0;
   width : 974px;
   height : 78px;
-  margin : 5 auto ;
+  margin : 0 auto;
   background-image: url("https://origin.cronosmedia.glr.pe/large/2020/11/20/lg_5fb8080d8362a65a906397fa.jpg");
   background-repeat: no-repeat;
-  overflow: hidden;
   & > a {
     display: flex;
     text-decoration: none;
@@ -283,6 +282,7 @@
 @media(max-width: 400px){
   .container{
     width: 365px;
+    overflow: hidden;
   }
   .contenedor-titulo{
     width: 145px;
