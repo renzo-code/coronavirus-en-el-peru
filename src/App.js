@@ -40,14 +40,15 @@ class App extends React.Component{
       const dataCoronavirus = await Axios(options)
       // console.log('dataCoronavirus',dataCoronavirus.data.data.spotlight.data)
       const { data } = dataCoronavirus.data.data.spotlight
-      // console.log('data', data[5].data[0].value)
+      console.log('data', data[6].data[0].value)
+      
       this.setState({
         casosTotales : data[0].data[0]?.value.split('_'),
         fallecidos : data[1].data[0]?.value.split('_'),
         recuperados : data[2].data[0]?.value.split('_'),
         ultimosCasos : data[3].data,
         ultimosFallecidos : data[4].data,
-        url : data[5].data,
+        url : data[6].data,
         imgCasos: data[5].data[0].value,
         imgFallecidos: data[5].data[1].value
       })
@@ -57,42 +58,43 @@ class App extends React.Component{
     }
   }
 
-  obtenerDatosCasos = async () => {
-    try{
-      const datosCasosObtenidos = await Axios.get("https://content-sheets.googleapis.com/v4/spreadsheets/12FXPCaqwtGVNmgKKmlttkXbxk0wF3vfkQwQQqkoKlv8/values/'Nuevo'!B20:NZ20?access_token=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk&key=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk")
-      // console.log('datosCasosObtenidos',datosCasosObtenidos.data.values)
-      this.setState({
-        estadisticaCasos : datosCasosObtenidos.data.values[0]
-      })
-    }
-    catch(e){
-      console.error(e)
-    }
-  }
+  // obtenerDatosCasos = async () => {
+  //   try{
+  //     const datosCasosObtenidos = await Axios.get("https://content-sheets.googleapis.com/v4/spreadsheets/12FXPCaqwtGVNmgKKmlttkXbxk0wF3vfkQwQQqkoKlv8/values/'Nuevo'!B20:NZ20?access_token=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk&key=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk")
+  //     // console.log('datosCasosObtenidos',datosCasosObtenidos.data.values)
+  //     this.setState({
+  //       estadisticaCasos : datosCasosObtenidos.data.values[0]
+  //     })
+  //   }
+  //   catch(e){
+  //     console.error(e)
+  //   }
+  // }
 
-  obtenerDatosFallecidos = async () => {
-    try{
-      const datosCasosFallecidos = await Axios.get("https://content-sheets.googleapis.com/v4/spreadsheets/12FXPCaqwtGVNmgKKmlttkXbxk0wF3vfkQwQQqkoKlv8/values/'Nuevo'!B21:NZ21?access_token=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk&key=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk")
+  // obtenerDatosFallecidos = async () => {
+  //   try{
+  //     const datosCasosFallecidos = await Axios.get("https://content-sheets.googleapis.com/v4/spreadsheets/12FXPCaqwtGVNmgKKmlttkXbxk0wF3vfkQwQQqkoKlv8/values/'Nuevo'!B21:NZ21?access_token=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk&key=AIzaSyAhFukVLxOrfZBH2uHDUajuxRbeql189nk")
       // console.log('dattt',datosCasosFallecidos.data.values)
-      this.setState({
-        estadisticaFallecidos : datosCasosFallecidos.data.values[0]
-      })
-    }
-    catch(e){
-      console.error(e)
-    }
-  }
+  //     this.setState({
+  //       estadisticaFallecidos : datosCasosFallecidos.data.values[0]
+  //     })
+  //   }
+  //   catch(e){
+  //     console.error(e)
+  //   }
+  // }
 
 
   render(){
+    console.log('sadsad', this.state.url[0]?.value)
     const { 
       casosTotales, 
       ultimosCasos, 
       ultimosFallecidos , 
       fallecidos, recuperados, 
       url, 
-      estadisticaCasos, 
-      estadisticaFallecidos, 
+      // estadisticaCasos, 
+      // estadisticaFallecidos, 
       imgCasos, 
       imgFallecidos
     } = this.state
