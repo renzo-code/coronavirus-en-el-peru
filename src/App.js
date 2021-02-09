@@ -26,8 +26,8 @@ class App extends React.Component{
   
   componentDidMount(){
     this.obtenerDatosCoronavirus()
-    this.obtenerDatosCasos()
-    this.obtenerDatosFallecidos()
+    // this.obtenerDatosCasos()
+    // this.obtenerDatosFallecidos()
   }
 
   obtenerDatosCoronavirus = async () => {
