@@ -2,7 +2,7 @@
   display: flex;
   // margin: 20px auto 0;
   width : 974px;
-  height : 95px;
+  height : 80px;
   margin : 0 auto;
   background-image: url("https://origin.cronosmedia.glr.pe/large/2020/11/20/lg_5fb8080d8362a65a906397fa.jpg");
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@
   overflow-x: hidden;
 }
 .contenedor-titulo{
-  padding-top: 20px;
+  padding-top: 15px;
   padding-left: 15px;
   display: block;
   width: 170px;
@@ -91,7 +91,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
   height: 22px;
-  border-bottom: 1px solid #889A9E;
+  // border-bottom: 1px solid #889A9E;
   margin-right: 10px;
 }
 .text-recuperados{
@@ -138,7 +138,7 @@
   font-size: 12px;
 }
 .status-15dias{
-  margin: 13px 0 4px 15px;
+  margin: 10px 0 4px 15px;
   // margin-left: 15px;
   // margin-top: 5px;
   height: auto;
@@ -160,7 +160,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
   height: 22px;
-  border-bottom: 1px solid #889A9E;
+  // border-bottom: 1px solid #889A9E;
   margin-right: 10px;
 }
 .numero-ultimos-fallecidos{
@@ -197,7 +197,7 @@
   font-size: 18px;
   border-bottom: 1px solid #889A9E;
   height: 25px;
-  padding-top: 12px;
+  padding-top: 3px;
   padding-bottom: 25px;
 }
 .cont-titulos-barra{
@@ -241,9 +241,9 @@
   padding-left: 10px;
 }
 .cont-botones{
-  padding-top: 10px;
+  padding-top: 7px;
   padding-left: 10px;
-  margin-top: 6px;
+  // margin-top: 6px;
   width: 104px;
   height: auto;
   border-left: 1px solid #889A9E;
