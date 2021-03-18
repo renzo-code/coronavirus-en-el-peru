@@ -1,8 +1,8 @@
 .container{
   display: flex;
-  margin: 20px auto 0;
+  // margin: 20px auto 0;
   width : 974px;
-  height : 78px;
+  height : 95px;
   margin : 0 auto;
   background-image: url("https://origin.cronosmedia.glr.pe/large/2020/11/20/lg_5fb8080d8362a65a906397fa.jpg");
   background-repeat: no-repeat;
@@ -10,9 +10,10 @@
     display: flex;
     text-decoration: none;
   }
+  overflow-x: hidden;
 }
 .contenedor-titulo{
-  padding-top: 8px;
+  padding-top: 20px;
   padding-left: 15px;
   display: block;
   width: 170px;
@@ -28,12 +29,10 @@
   font-weight: bold;
 }
 .status-covid{
-  margin-left: 20px;
-  margin-top: 7px;
-  height: 60px;
+  margin: 13px 0 5px 20px;
+  height: auto;
   width: 230px;
   border-right: 1px solid #889A9E;
-  
 }
 .status-casos-totales{
   position: relative;
@@ -92,6 +91,8 @@
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
   height: 22px;
+  border-bottom: 1px solid #889A9E;
+  margin-right: 10px;
 }
 .text-recuperados{
   font-size: 12px;
@@ -101,20 +102,46 @@
 .numero-status-recuperados{
   position: absolute;
   top: 1px;
-  right: 50px;
+  right: 40px;
   font-size: 18px;
   font-weight: bold;
 }
 .numero-parentesis-recuperados{
   position: absolute;
   top: 3px;
+  right: 0px;
+  font-size: 12px;
+}
+.status-vacunados{
+  position: relative;
+  color: #00C0FF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  height: 22px;
+}
+.text-vacunados{
+  font-size: 12px;
+  padding-top: 2px;
+  font-family: 'Roboto', sans-serif;
+}
+.numero-status-vacunados{
+  position: absolute;
+  top: 1px;
+  right: 65px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.numero-parentesis-vacunados{
+  position: absolute;
+  top: 3px;
   right: 10px;
   font-size: 12px;
 }
 .status-15dias{
-  margin-left: 15px;
-  margin-top: 7px;
-  height: 60px;
+  margin: 13px 0 4px 15px;
+  // margin-left: 15px;
+  // margin-top: 5px;
+  height: auto;
   width: 200px;
   border-right: 1px solid #889A9E;
 }
@@ -132,13 +159,28 @@
   color: #9F99A3;
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
-  height: 25px;
+  height: 22px;
+  border-bottom: 1px solid #889A9E;
+  margin-right: 10px;
 }
 .numero-ultimos-fallecidos{
   position: absolute;
   font-size: 15px;
+  right: 0;
+  top: 1px;
+}
+.numero-ultimos-vacunados{
+  position: absolute;
   right: 10px;
   top: 1px;
+  font-size: 15px;
+}
+.status-vacunados{
+  position: relative;
+  color: #00C0FF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  height: 22px;
 }
 .evolucion-diaria{
   width: 210px;
@@ -155,14 +197,15 @@
   font-size: 18px;
   border-bottom: 1px solid #889A9E;
   height: 25px;
-  padding-top: 3px;
+  padding-top: 12px;
+  padding-bottom: 25px;
 }
 .cont-titulos-barra{
   display: flex;
   align-items: flex-end;
   position: relative;
   padding-bottom: 4px;
-  height: 52px;
+  height: 50px;
 }
 .titulo-casos{
   position: relative;
@@ -177,7 +220,7 @@
 }
 .titulo-1grafico{
   position: absolute;
-  bottom: 1px;
+  bottom: -3px;
   font-size: 10px;
   width: 100%;
   height: auto;
@@ -189,22 +232,23 @@
   color: #949DA4;
   font-size: 10px;
   font-family: 'Roboto', sans-serif;
-  padding-bottom: 15px;
+  padding-bottom: 13px;
 }
 .titulo-2grafico{
   position: absolute;
   font-size: 10px;
-  bottom: 1px;
+  bottom: -3px;
   padding-left: 10px;
 }
 .cont-botones{
-  padding-top: 1px;
+  padding-top: 10px;
+  padding-left: 10px;
   margin-top: 6px;
   width: 104px;
-  height: 65px;
+  height: auto;
   border-left: 1px solid #889A9E;
-  padding-left: 10px;
   margin-left: 5px;
+  margin-bottom: 7px;
 }
 .btn-sudamerica{
   font-size: 11.8px;
@@ -220,7 +264,7 @@
 .btn-mundo{
   margin-left: 5px;
   font-size: 11.8px;
-  margin-top: 3px;
+  margin-top: 8px;
   padding-left: 5px;
   color: white;
   border: 1px solid white;
@@ -257,7 +301,7 @@
   font-weight: bold;
 }
 .grafico-casos{
-  height: 25px;
+  height: 26px;
   width: 100%;
   background-color: transparent;
 }
@@ -279,7 +323,7 @@
     width: 635px;
   }
 }
-@media(max-width: 615px){
+@media(max-width: 624px){
   .status-15dias{
     display: none;
   }
@@ -287,17 +331,15 @@
     width: 420px;
   }
 }
-@media(max-width: 400px){
+@media(max-width: 409px){
   .container{
     width: 365px;
     overflow: hidden;
   }
   .contenedor-titulo{
     width: 145px;
-    padding-top: 11px;
-  }
-  .contenedor-titulo{
-    padding-left: 5px;
+    padding-top: 23px;
+    padding-left: 8px;
   }
   .status-covid{
     margin-left: 0;
@@ -310,21 +352,36 @@
     padding-left: 53px;
   }
   .numero-status-recuperados{
-    right: 50px;
+    right: 43px;
+    font-size: 16.5px;
   }
   .numero-parentesis-recuperados{
-    right: 19px;
+    right: 5px;
   }
   .numero-status-fallecidos{
-    right: 40px;
+    right: 43px;
+    font-size: 16.5px;
   }
   .numero-parentesis-fallecidos{
-    right: 10px;
+    right: 5px;
   }
   .numero-status-casos{
     right: 48px;
+    font-size: 16.5px;
   }
   .numero-parentesis{
-    right: 10px;
+    right: 5px;
+  }
+  .numero-status-vacunados{
+    right: 70px;
+    font-size: 16.5px;
+  }
+  .numero-parentesis-vacunados{
+    right: 15px;
+  }
+}
+@media(max-width: 360px){
+  .container{
+    width: 360px;
   }
 }

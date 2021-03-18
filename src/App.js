@@ -3,7 +3,6 @@ import Axios from 'axios'
 
 import Bandera from './components/Bandera/Bandera'
 // import Grafico from './components/Grafico/Grafico'
-
 // import { Sparklines, SparklinesLine } from 'react-sparklines';
 
 import './App.css'
@@ -15,19 +14,17 @@ class App extends React.Component{
     fallecidos : [],
     recuperados : [],
     ultimosCasos : {},
-    ultimosFallecidos: {},
-    url: {},
-    imgCasos: {},
-    imgFallecidos: {},
-
+    ultimosFallecidos : {},
+    vacunados : [],
+    imgCasos : {},
+    imgFallecidos : {},
     estadisticaCasos : [],
-    estadisticaFallecidos : []
+    estadisticaFallecidos : [],
+    url : {}
   }
   
   componentDidMount(){
     this.obtenerDatosCoronavirus()
-    // this.obtenerDatosCasos()
-    // this.obtenerDatosFallecidos()
   }
 
   obtenerDatosCoronavirus = async () => {
@@ -38,19 +35,18 @@ class App extends React.Component{
         url: 'https://cronosservices.glr.pe/api/spotlight?site_id=larepublica&_id=5fb7ebafd9b52b705b260634&no-api-cache=1&no-cache=1&status=1'
       }
       const dataCoronavirus = await Axios(options)
-      // console.log('dataCoronavirus',dataCoronavirus.data.data.spotlight.data)
       const { data } = dataCoronavirus.data.data.spotlight
-      console.log('data', data[6].data[0].value)
       
       this.setState({
         casosTotales : data[0].data[0]?.value.split('_'),
         fallecidos : data[1].data[0]?.value.split('_'),
         recuperados : data[2].data[0]?.value.split('_'),
-        ultimosCasos : data[3].data,
-        ultimosFallecidos : data[4].data,
-        url : data[6].data,
-        imgCasos: data[5].data[0].value,
-        imgFallecidos: data[5].data[1].value
+        // vacunados : data[3].data[0].value.split('_'),
+        ultimosCasos : data[4].data,
+        ultimosFallecidos : data[5].data,
+        imgCasos: data[6].data[0].value,
+        imgFallecidos: data[6].data[1].value,
+        url : data[7].data
       })
     }
     catch(e){
@@ -86,24 +82,25 @@ class App extends React.Component{
 
 
   render(){
-    console.log('sadsad', this.state.url[0]?.value)
     const { 
       casosTotales, 
       ultimosCasos, 
-      ultimosFallecidos , 
-      fallecidos, recuperados, 
-      url, 
+      ultimosFallecidos,
+      // vacunados, 
+      fallecidos, 
+      recuperados, 
+      imgCasos, 
+      imgFallecidos,
+      url
       // estadisticaCasos, 
       // estadisticaFallecidos, 
-      imgCasos, 
-      imgFallecidos
     } = this.state
-
+    
     return (
       <>
       <div className="container">
       
-        <a target="_blank" href={url[0]?.value}>
+        <a target="_blank" without rel="noreferrer" href={url[0]?.value}>
           <div className="contenedor-titulo">
             <Bandera/>
               <h3 className="titulo-covid">CORONAVIRUS</h3><div><h3 className="subtitulo-covid">EN PERÚ</h3></div>
@@ -124,12 +121,18 @@ class App extends React.Component{
               <h3 className="numero-status-recuperados">{recuperados[0]}</h3>
               <h5 className="numero-parentesis-recuperados">{recuperados[1]}</h5>
             </div>
+            {/* <div className="status-vacunados">
+              <h6 className="text-vacunados">VACUNADOS</h6>
+              <h3 className="numero-status-vacunados">{vacunados[0]}</h3>
+              <h5 className="numero-parentesis-vacunados">{vacunados[1]}</h5>
+            </div> */}
           </div>
 
           <div className="status-15dias">
             <div className="titulo-15dias">ÚLTIMOS 15 DÍAS</div>
             <div className="status-casos-totales"><h6 className="text-recuperados">CASOS</h6> <h5 className="numero-casos-totales">{ultimosCasos[0]?.value}</h5></div>
             <div className="status-casos"><h6 className="text-recuperados">FALLECIDOS</h6><h5 className="numero-ultimos-fallecidos">{ultimosFallecidos[0]?.value}</h5></div>
+            {/* <div className="status-vacunados"><h6 className="text-recuperados">VACUNADOS</h6><h5 className="numero-ultimos-vacunados">{vacunados[2]}</h5></div> */}
           </div>
 
           <div className="evolucion-diaria">
@@ -156,12 +159,12 @@ class App extends React.Component{
         </a>
         <div className="cont-botones">
           <div className="cont-btn1">
-            <a target="_blank" href={url[1]?.value}>
+            <a target="_blank" without rel="noreferrer" href={url[1]?.value}>
               <button className="btn-sudamerica">EN SUDAMÉRICA</button>
             </a>
           </div>
           <div className="cont-btn2">
-            <a target="_blank" href={url[2]?.value}>
+            <a target="_blank" without rel="noreferrer" href={url[2]?.value}>
               <button className="btn-mundo">EN EL MUNDO</button>
             </a>
           </div>
